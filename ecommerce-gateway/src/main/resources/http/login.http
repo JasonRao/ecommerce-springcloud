@@ -1,0 +1,16 @@
+POST 127.0.0.1:9001/gw/ecommerce/login
+Content-Type:  application/json
+
+{
+  "username": "ImoocQinyi@imooc.com",
+  "password": "25d55ad283aa400af464c76d713c07ad"
+}
+
+###
+POST 127.0.0.1:9001/gw/ecommerce/register
+Content-Type: application/json
+
+{
+  "username": "jason.rao@imooc.com",
+  "password": "25d55ad283aa400af464c76d713c07ad"
+}

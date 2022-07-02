@@ -1,0 +1,9 @@
+GET http://localhost:8000/ecommerce-nacos-client/nacos-client/service-instance
+Accept: application/json
+
+#GET http://127.0.0.1:9001/gw/ecommerce-nacos-client/nacos-client/service-instance?serviceId=ecommerce-gateway
+###查看Sleuth跟踪信息
+GET http://127.0.0.1:9001/gw/ecommerce-nacos-client/sleuth/trace-info
+Accept: application/json
+ecommerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlY29tbWVyY2UtdXNlciI6IntcImlkXCI6MTAsXCJ1c2VybmFtZVwiOlwiSW1vb2NRaW55aUBpbW9vYy5jb21cIn0iLCJqdGkiOiIzNzllYmI1NC1mYjY4LTRkNWItOTFmMi1lMDgzNTlhNjMxODAiLCJleHAiOjE2NTU1NjgwMDB9.CUxpEoyC2m7z8anKONqT0NL4E4yyR63uEo4PjS3fEBbgUAqhz-syylWn6qL6oVQXfQLKmWLeOylRNnd8q66fFxwdty5KIxCBjqftcz5izrT0i2YKSEAZ5JtWXEStVC2if3W8QZfw7gRVZj_Tg6RLQ8AEeyxJv7S55jjN_YRif_9K7vxUFYTiS2H7kgCyrbfz7rf_-Qk6okzoLZIZPoJwz-yL6Pelb6sV-bETrN3r83pmhOnU_howBh_lDuxhxI83602Ehr0pEVy1VLLttx164JIUykrSkgOdpbWVcLROMezMUnFAJaJz77WI1ut7tT0_0UGRauM6CNa-tUWXzcqrJQ
+token: ir6

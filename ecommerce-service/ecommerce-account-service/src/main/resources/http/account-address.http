@@ -1,0 +1,43 @@
+### 创建用户地址信息
+POST http://127.0.0.1:9001/gw/ecommerce-account-service/address/create-address
+Content-Type: application/json
+ecommerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlY29tbWVyY2UtdXNlciI6IntcImlkXCI6MTAsXCJ1c2VybmFtZVwiOlwiSW1vb2NRaW55aUBpbW9vYy5jb21cIn0iLCJqdGkiOiJiNmQ0ZTM0Mi0yNWU1LTQwOGItYTJlMi0xNTI1ZDIyNmE3NjUiLCJleHAiOjE2NTY0MzIwMDB9.A8Xauk27EBNFesTR5qysbEMCbEKEnhEyAO4Q_yNQAlES_WcsTapSRw8WBxUnjuveqJzLSOqn8tS6lu7QhG_BzsDTppnM-AqcE__9YNGA0TjiOHyE9eqWalm74kcY52bMFQgF_yRsZyzGCZq5fmhRlt_XvT_rfawrEai5eHMUYT9DYCny5yWeRlM2pliDSexahqYtjvSLBP8pyTVgEWk8p_ml4iF4fPWYJeryl1K46uV4wKOVJTbH45nczXECI51q5ZO8E5EQMrpwEXqT17BBSLxihdBIomS_zHeXS3QsSCXoSnhxhRJP0QjDPnJLCn6zoa4bZJkCtvlpAT4qpFuxBw
+
+{
+  "userId": 10,
+  "addressItems": [
+    {
+      "username": "JasonRao_007",
+      "phone": "16600000001",
+      "province": "上海市",
+      "city": "上海市",
+      "addressDetail": "闵行区"
+    }
+  ]
+}
+
+### 当前登录用户地址信息
+GET http://127.0.0.1:9001/gw/ecommerce-account-service/address/current-address
+Accept: application/json
+ecommerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlY29tbWVyY2UtdXNlciI6IntcImlkXCI6MTAsXCJ1c2VybmFtZVwiOlwiSW1vb2NRaW55aUBpbW9vYy5jb21cIn0iLCJqdGkiOiJiNmQ0ZTM0Mi0yNWU1LTQwOGItYTJlMi0xNTI1ZDIyNmE3NjUiLCJleHAiOjE2NTY0MzIwMDB9.A8Xauk27EBNFesTR5qysbEMCbEKEnhEyAO4Q_yNQAlES_WcsTapSRw8WBxUnjuveqJzLSOqn8tS6lu7QhG_BzsDTppnM-AqcE__9YNGA0TjiOHyE9eqWalm74kcY52bMFQgF_yRsZyzGCZq5fmhRlt_XvT_rfawrEai5eHMUYT9DYCny5yWeRlM2pliDSexahqYtjvSLBP8pyTVgEWk8p_ml4iF4fPWYJeryl1K46uV4wKOVJTbH45nczXECI51q5ZO8E5EQMrpwEXqT17BBSLxihdBIomS_zHeXS3QsSCXoSnhxhRJP0QjDPnJLCn6zoa4bZJkCtvlpAT4qpFuxBw
+
+### 通过 id 获取用户地址信息
+GET http://127.0.0.1:9001/gw/ecommerce-account-service/address/address-info?id=2
+Accept: application/json
+ecommerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlY29tbWVyY2UtdXNlciI6IntcImlkXCI6MTAsXCJ1c2VybmFtZVwiOlwiSW1vb2NRaW55aUBpbW9vYy5jb21cIn0iLCJqdGkiOiJiNmQ0ZTM0Mi0yNWU1LTQwOGItYTJlMi0xNTI1ZDIyNmE3NjUiLCJleHAiOjE2NTY0MzIwMDB9.A8Xauk27EBNFesTR5qysbEMCbEKEnhEyAO4Q_yNQAlES_WcsTapSRw8WBxUnjuveqJzLSOqn8tS6lu7QhG_BzsDTppnM-AqcE__9YNGA0TjiOHyE9eqWalm74kcY52bMFQgF_yRsZyzGCZq5fmhRlt_XvT_rfawrEai5eHMUYT9DYCny5yWeRlM2pliDSexahqYtjvSLBP8pyTVgEWk8p_ml4iF4fPWYJeryl1K46uV4wKOVJTbH45nczXECI51q5ZO8E5EQMrpwEXqT17BBSLxihdBIomS_zHeXS3QsSCXoSnhxhRJP0QjDPnJLCn6zoa4bZJkCtvlpAT4qpFuxBw
+
+### 获取用户地址信息
+POST http://127.0.0.1:9001/gw/ecommerce-account-service/address/address-info-by-table-id
+Content-Type: application/json
+ecommerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlY29tbWVyY2UtdXNlciI6IntcImlkXCI6MTAsXCJ1c2VybmFtZVwiOlwiSW1vb2NRaW55aUBpbW9vYy5jb21cIn0iLCJqdGkiOiJiNmQ0ZTM0Mi0yNWU1LTQwOGItYTJlMi0xNTI1ZDIyNmE3NjUiLCJleHAiOjE2NTY0MzIwMDB9.A8Xauk27EBNFesTR5qysbEMCbEKEnhEyAO4Q_yNQAlES_WcsTapSRw8WBxUnjuveqJzLSOqn8tS6lu7QhG_BzsDTppnM-AqcE__9YNGA0TjiOHyE9eqWalm74kcY52bMFQgF_yRsZyzGCZq5fmhRlt_XvT_rfawrEai5eHMUYT9DYCny5yWeRlM2pliDSexahqYtjvSLBP8pyTVgEWk8p_ml4iF4fPWYJeryl1K46uV4wKOVJTbH45nczXECI51q5ZO8E5EQMrpwEXqT17BBSLxihdBIomS_zHeXS3QsSCXoSnhxhRJP0QjDPnJLCn6zoa4bZJkCtvlpAT4qpFuxBw
+
+{
+  "ids": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
+}
