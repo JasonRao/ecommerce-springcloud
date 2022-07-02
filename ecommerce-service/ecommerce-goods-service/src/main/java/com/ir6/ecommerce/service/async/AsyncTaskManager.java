@@ -1,6 +1,6 @@
 package com.ir6.ecommerce.service.async;
 
-import com.ir6.ecommerce.constant.AsyncTaskStatusEnum;
+import com.ir6.ecommerce.constant.AsyncTaskStatus;
 import com.ir6.ecommerce.goods.GoodsInfo;
 import com.ir6.ecommerce.vo.AsyncTaskInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -46,7 +46,7 @@ public class AsyncTaskManager {
     public AsyncTaskInfo initTask() {
         AsyncTaskInfo taskInfo = new AsyncTaskInfo();
         taskInfo.setTaskId(UUID.randomUUID().toString());
-        taskInfo.setStatus(AsyncTaskStatusEnum.STARTED);
+        taskInfo.setStatus(AsyncTaskStatus.STARTED);
         taskInfo.setStartTime(new Date());
 
         // 初始化的时候就要把异步任务执行信息放入到存储容器中

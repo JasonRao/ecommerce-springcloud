@@ -8,7 +8,7 @@ import lombok.Getter;
  * */
 @Getter
 @AllArgsConstructor
-public enum AsyncTaskStatusEnum {
+public enum AsyncTaskStatus {
     STARTED(0, "已经启动"),
     RUNNING(1, "正在运行"),
     SUCCESS(2, "执行成功"),
