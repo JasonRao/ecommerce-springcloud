@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.ir6.ecommerce.dao.EcommerceGoodsDao;
 import com.ir6.ecommerce.entity.EcommerceGoods;
 import com.ir6.ecommerce.goods.GoodsInfo;
-import com.ir6.ecommerce.goods.SimpleGoodsInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.lang3.time.StopWatch;
@@ -65,9 +64,9 @@ public class AsyncServiceImpl implements IAsyncService {
      * dict: key -> <id, SimpleGoodsInfo(json)>
      * */
     private void saveNewGoodsInfoToRedis(List<EcommerceGoods> savedGoods) {
-        Map<Long, String> id2JsonMap = savedGoods.stream()
+        Map<String, String> id2JsonMap = savedGoods.stream()
                 .map(EcommerceGoods::toSimple)
-                .collect(Collectors.toMap(SimpleGoodsInfo::getId, v -> JSON.toJSONString(v)));
+                .collect(Collectors.toMap(k -> k.getId().toString(), v -> JSON.toJSONString(v)));
 
         redisTemplate.opsForHash().putAll(ECOMMERCE_GOODS_DICT_KEY, id2JsonMap);
 
