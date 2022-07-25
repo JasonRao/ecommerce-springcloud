@@ -33,7 +33,7 @@ public class AsyncTaskManager {
         return taskInfo;
     }
 
-    //设置异步任务执行状态信息
+    //设置异步任务执行状态信息  --> 通过AOP横切异步任务来做状态管理
     public void setTaskInfo(AsyncTaskInfo taskInfo) {
         taskContainer.put(taskInfo.getTaskId(), taskInfo);
     }
